@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Will You Marry Me?</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f8ff;
+            font-family: Arial, sans-serif;
+        }
+        h1 {
+            margin-bottom: 20px;
+        }
+        .button {
+            padding: 15px 30px;
+            margin: 10px;
+            font-size: 20px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        .yes {
+            background-color: #4CAF50; /* Green */
+            color: white;
+        }
+        .no {
+            background-color: #f44336; /* Red */
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <h1>Will You Marry Me?</h1>
+    <button class="button yes" onclick="handleYes()">Yes</button>
+    <button class="button no" id="noButton" onclick="handleNo()">No</button>
+
+    <script>
+        function handleYes() {
+            alert("Yay! I’m so happy!");
+        }
+
+        function handleNo() {
+            const noButton = document.getElementById('noButton');
+            noButton.style.position = 'absolute';
+            noButton.style.top = Math.random() * 90 + 'vh';
+            noButton.style.left = Math.random() * 90 + 'vw';
+        }
+    </script>
+</body>
+</html>
